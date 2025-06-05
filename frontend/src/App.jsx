@@ -11,6 +11,7 @@ import SustainableReport from './pages/SustainableReport'
 import Chatbot from './pages/Chatbot'
 import Login from './pages/Login'
 import Learn from './pages/Learn'
+import Community from './pages/Community'
 
 const App = () => {
   return (
@@ -20,7 +21,7 @@ const App = () => {
       <Routes>
       <Route path="/login" element={<Login />} />
       <Route path="/learn" element={<Learn/>} />
-
+    <Route path='/community' element={<Community/>}/>
         <Route path="/" element={<Home4 />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
