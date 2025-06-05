@@ -4,6 +4,7 @@ const cors = require('cors');
 
 const pool = require('./db');
 const postRoutes = require('./routes/postsRoute');
+const commentRoutes = require('./routes/commentsRoute')
 
 require('dotenv').config();
 const app = express();
@@ -13,6 +14,8 @@ app.use(express.json());
 
 
 app.use('/posts', postRoutes);
+app.use('/', commentRoutes); 
+
 app.get('/', (req, res) => {
   res.send('API is running');
 });

@@ -1,13 +1,9 @@
 import React from 'react'
 import { Routes, Route } from 'react-router-dom'
 import Navbar from './components/Navbar'
-import Home3 from './pages/Home3'
+
 import Home4 from './pages/Home4'
-import Home5 from './pages/Home5'
-import Home6 from './pages/Home6'
-import Home1 from './pages/Home1'
-import Home2 from './pages/Home2'
-import Home from './pages/Home'
+
 
 import About from './pages/About'
 import Contact from './pages/Contact'
@@ -18,7 +14,7 @@ import Learn from './pages/Learn'
 
 const App = () => {
   return (
-    <div className="bg-[#0D0D0D]  text-[#e0e0d1] min-h-screen">
+    <div className="bg-[#0F1714]  text-[#e0e0d1] min-h-screen">
 
       <Navbar />
       <Routes>

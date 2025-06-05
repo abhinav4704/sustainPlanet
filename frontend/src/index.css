@@ -1,1 +1,21 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.cdnfonts.com/css/helvetica-neue-55');
 @import "tailwindcss";
+
+
+
+:root {
+    /* --font-roboto: "Roboto", sans-serif; */
+    --font-poppins: "Poppins", sans-serif;
+    --font-helvetica: 'Helvetica Neue', sans-serif;
+                                                
+  }
+
+  
+
+  .font-helvetica {
+    font-family: var(--font-helvetica);
+  }
+  .font-poppins {
+    font-family: var(--font-poppins);
+    }

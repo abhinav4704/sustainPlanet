@@ -1,4 +1,4 @@
-const Post = require('../model/Posts');
+const Post = require('../model/postModel');
 
 async function createPost(req, res) {
   try {
@@ -27,7 +27,7 @@ async function getPostById(req, res) {
 
 async function getAllPosts(req, res) {
   try {
-    const posts = await Post.findAll();
+    const posts = await Post.findAll({limit:10,offset:0});
     res.json(posts);
   } catch (error) {
     console.error(error);
