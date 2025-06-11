@@ -3,8 +3,8 @@ const express = require('express');
 const router = express.Router({ mergeParams: true });
 const {
   createComment,
-  getCommentsByPostId,
-  getCommentById,
+  getCommentsByPost,
+
 } = require('../controller/commentController');
 
 /**
@@ -16,9 +16,9 @@ const {
 router.post('/posts/:postId/comments', createComment);
 
 // GET    /posts/:postId/comments      → list all comments (flat) for that post
-router.get('/', getCommentsByPostId);
+router.get('/', getCommentsByPost);
 
 // GET    /posts/:postId/comments/:id  → get a single comment by its ID
-router.get('/:id', getCommentById);
+
 
 module.exports = router;

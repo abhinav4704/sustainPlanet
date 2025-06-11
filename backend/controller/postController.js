@@ -1,42 +1,29 @@
-const Post = require('../model/postModel');
+const Post = require("../model/postModel");
 
-async function createPost(req, res) {
+exports.createPost = async (req, res) => {
   try {
-    const { user_id, title, content } = req.body;
-    if (!user_id || !title || !content) {
-      return res.status(400).json({ message: 'Missing required fields' });
-    }
-    const postId = await Post.create({ user_id, title, content });
-    res.status(201).json({ message: 'Post created', postId });
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Server error' });
+    const post = await Post.create(req.body);
+    res.status(201).json(post);
+  } catch (err) {
+    res.status(400).json({ error: err.message });
   }
-}
+};
 
-async function getPostById(req, res) {
+exports.getPosts = async (req, res) => {
+  try {
+    const posts = await Post.find().sort({ createdAt: -1 });
+    res.json(posts);
+  } catch (err) {
+    res.status(500).json({ error: err.message });
+  }
+};
+
+exports.getPostById = async (req, res) => {
   try {
     const post = await Post.findById(req.params.id);
-    if (!post) return res.status(404).json({ message: 'Post not found' });
+    if (!post) return res.status(404).json({ error: "Post not found" });
     res.json(post);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Server error' });
+  } catch (err) {
+    res.status(500).json({ error: err.message });
   }
-}
-
-async function getAllPosts(req, res) {
-  try {
-    const posts = await Post.findAll({limit:10,offset:0});
-    res.json(posts);
-  } catch (error) {
-    console.error(error);
-    res.status(500).json({ message: 'Server error' });
-  }
-}
-
-module.exports = {
-  createPost,
-  getPostById,
-  getAllPosts,
 };
