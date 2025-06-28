@@ -25,6 +25,22 @@ function App() {
        {/* <Route path="/report" element={<SustainableReport />} />
         <Route path="/chatbot" element={<Chatbot />} /> */}
       </Routes>
+
+      <section className="py-10 text-center text-sm text-gray-300 w-full bg-black/50 backdrop-blur-md border-t border-white/10 shadow-inner mt-16">
+  <p>© 2025 SustainPlanet. All rights reserved.</p>
+  <div className="mt-2 space-x-4">
+    <a href="/about" className="hover:underline hover:text-white transition">
+      About
+    </a>
+    <a href="/contact" className="hover:underline hover:text-white transition">
+      Contact
+    </a>
+    <a href="/terms" className="hover:underline hover:text-white transition">
+      Terms
+    </a>
+  </div>
+</section>
+
     </div>
   )
 }

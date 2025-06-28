@@ -68,24 +68,24 @@ const Home = () => {
         <GlobalWarmingGraph />
       </section>
 
-      <section className="py-16 rounded-4xl w-15/16 px-6 text-black mt-25 mb-25 mx-auto">
-        <h2 className="text-3xl font-bold  mb-6 ml-10">Community</h2>
-        <div className="text-center w-15/16 p-10 flex gap-5 rounded-2xl h-[400px]">
-          <div className="text-left text-xl pt-10 flex-col w-1/2">
-            <div>Join the community</div>
-            <br />
-            <div>
-              Connect with like minded individuals, share ideas, and collaborate
-              on sustainable projects
-            </div>
+<section className="py-16 rounded-3xl w-11/12 px-6 text-white mt-24 mb-24 mx-auto bg-black/40 backdrop-blur-md border border-white/10 shadow-xl">
+  <h2 className="text-3xl font-bold mb-6 ml-10">Join the Community</h2>
 
-            <button className="px-6 py-2 my-6 bg-gray-700 rounded-full text-white font-semibold hover:bg-white hover:text-green-800 transition">
-              Join Now
-            </button>
-          </div>
-          <img src={community} alt="Community" />
-        </div>
-      </section>
+  <div className="text-center w-full p-10 flex gap-5 rounded-2xl h-[400px]">
+    <div className="text-left text-xl pt-10 flex-col w-1/2">
+      <div>
+        Connect with like-minded individuals, share ideas, and collaborate
+        on sustainable projects.
+      </div>
+      <br />
+      <button className="px-6 py-2 my-6 bg-gray-700 rounded-full text-white font-semibold hover:bg-white hover:text-green-800 transition">
+        Join Now
+      </button>
+    </div>
+    <img src={community} alt="Community" className="rounded-xl object-cover max-h-full" />
+  </div>
+</section>
+
 
       <section
         id="learning"
@@ -187,20 +187,7 @@ const Home = () => {
         </div>
       </section>
 
-      <footer className="py-10 text-center text-sm text-gray-400">
-        <p>© 2025 SustainPlanet. All rights reserved.</p>
-        <div className="mt-2 space-x-4">
-          <a href="/about" className="hover:underline">
-            About
-          </a>
-          <a href="/contact" className="hover:underline">
-            Contact
-          </a>
-          <a href="/terms" className="hover:underline">
-            Terms
-          </a>
-        </div>
-      </footer>
+
     </div>
   );
 };

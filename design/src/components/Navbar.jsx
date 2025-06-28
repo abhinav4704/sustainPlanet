@@ -63,13 +63,18 @@ export default function Navbar() {
         </ul>
 
         {/* Login button on right */}
-        <Link
-          to="/login"
-          className="relative inline-block px-4 py-1.5 text-sm text-[#c1a362] border border-[#c1a362] rounded-full font-medium bg-transparent transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] overflow-hidden hover:text-[#212121] hover:scale-105 hover:shadow-[0_0_12px_rgba(193,163,98,0.4)] active:scale-100 group"
-        >
-          <span className="absolute inset-0 m-auto w-10 h-10 rounded-full scale-0 bg-[#c1a362] z-[-1] transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[3]" />
-          Login
-        </Link>
+<Link
+  to="/login"
+  className="relative inline-block px-4 py-1.5 text-sm text-[#228B22] border border-[#228B22] rounded-full font-medium bg-transparent transition-all duration-300 ease-[cubic-bezier(0.23,1,0.32,1)] overflow-hidden group hover:scale-105 hover:shadow-[0_0_14px_rgba(27,94,32,0.6)] active:scale-100"
+>
+  <span className="absolute inset-0 m-auto w-10 h-10 rounded-full scale-0 bg-[#1b5e20] z-[-1] transition-all duration-500 ease-[cubic-bezier(0.23,1,0.32,1)] group-hover:scale-[3]" />
+  
+  <span className="relative z-[1] transition-colors duration-300 group-hover:text-white">
+    Login
+  </span>
+</Link>
+
+
       </nav>
     </div>
   );

@@ -50,19 +50,6 @@ const FloatingLeavesAndRoots = () => {
           overflow: hidden;
         }
 
-        .roots-container {
-          position: absolute;
-          bottom: 0;
-          left: 50%;
-          transform: translateX(-50%);
-          width: 100vw;
-          max-width: 1200px;
-          height: 200px;
-          pointer-events: none;
-          filter: drop-shadow(0 0 6px rgba(40, 90, 40, 0.7));
-          opacity: 0.85;
-        }
-
         @keyframes fall {
           0% {
             transform: translateY(-10vh) rotate(0deg);
@@ -91,38 +78,6 @@ const FloatingLeavesAndRoots = () => {
         {leaves.map(({ id, style }) => (
           <Leaf key={id} style={style} />
         ))}
-
-        <div className="roots-container">
-          <svg
-            width="100%"
-            height="200"
-            viewBox="0 0 1200 200"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path
-              d="M0 150 Q200 100 400 150 T800 150 T1200 150"
-              stroke="rgba(34, 97, 34, 0.8)"
-              strokeWidth="8"
-              fill="none"
-              strokeLinecap="round"
-            />
-            <path
-              d="M100 150 Q250 120 350 140 T650 150 T1100 140"
-              stroke="rgba(72, 160, 72, 0.7)"
-              strokeWidth="4"
-              fill="none"
-              strokeLinecap="round"
-            />
-            <path
-              d="M150 160 Q300 130 450 150 T750 160 T1150 150"
-              stroke="rgba(102, 205, 102, 0.6)"
-              strokeWidth="2"
-              fill="none"
-              strokeLinecap="round"
-            />
-          </svg>
-        </div>
       </div>
     </>
   );
